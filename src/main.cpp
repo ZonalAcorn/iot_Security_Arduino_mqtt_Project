@@ -3,10 +3,7 @@
 #include <Arduino_Sensorkit.h>
 #include <ArduinoMqttClient.h>
 #include <WiFiS3.h>
-
-
-const char* ssid = "IoTProgram";
-const char* password = "InternetOfThingsProgram";
+#include <secrets.h>
 
 int status = WL_IDLE_STATUS;
 WiFiServer server(80);
@@ -26,8 +23,6 @@ MqttClient mqttClient(wifiClient);
 
 const char broker[] = "192.168.1.190";
 int        port     = 1885;
-const char mqttUser[] = "admin";
-const char mqttPass[] = "admin";
 const char topic[]  = "iot/Data/Temp";
 const char topic2[] = "iot/Data/Humidity";
 const char topic3[]  = "iot/Data/Buzzer";
@@ -193,8 +188,6 @@ void loop() {
 
 const char broker[] = "192.168.1.190";
 int        port     = 1885;
-const char mqttUser[] = "admin";
-const char mqttPass[] = "admin";
 const char topic[]  = "iot/Data/Light";
 const char topic2[]  = "iot/Control/Dial";
 const char topic3[]  = "iot/Data/LED";
@@ -336,8 +329,6 @@ int        angle    = 90;
 
 const char broker[] = "192.168.1.190";
 int        port     = 1885;
-const char mqttUser[] = "admin";
-const char mqttPass[] = "admin";
 const char topic[]  = "iot/Data/Dial_Speed";
 // Servo angle is 0-180 with 90 being motionless
 const char topic2[]  = "iot/Data/Servo_Speed";
